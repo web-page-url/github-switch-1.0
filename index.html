@@ -1,0 +1,154 @@
+<html>
+<title>GIT SWITCHER — Command Reference</title>
+
+<!-- ── HERO ──────────────────────────────────────────────────────── -->
+<header class="hero">
+  <div class="boot-line" id="boot-line">&nbsp;</div>
+  <h1 class="hero-title">GIT<span class="slash"> / </span><span class="word2">SWITCH</span></h1>
+  <p class="hero-sub">PowerShell · GitHub CLI · Dual Account Reference<span class="cursor"></span></p>
+<link rel="stylesheet" href="anubhav.css">
+</header>
+
+<!-- ── ACCOUNT CARDS ─────────────────────────────────────────────── -->
+<section class="accounts">
+
+  <div class="account-card card-amber">
+    <div class="card-eyebrow"><span class="dot"></span>Personal Dev</div>
+    <div class="card-username">nextgencode13</div>
+    <div class="card-email">nextgencode13@gmail.com</div>
+    <button class="card-switch-btn" data-cmd="Switch-ToNextGen" onclick="copyCmd(this)">
+      <span class="btn-ps">PS&gt;</span>
+      <span>Switch-ToNextGen</span>
+      <span class="copied-badge">✓ copied</span>
+    </button>
+  </div>
+
+  <div class="account-card card-blue">
+    <div class="card-eyebrow"><span class="dot"></span>Work · Innodata</div>
+    <div class="card-username">anubhav-codes-13</div>
+    <div class="card-email">AChaudhary@innodata.com</div>
+    <button class="card-switch-btn" data-cmd="Switch-ToAnubhav" onclick="copyCmd(this)">
+      <span class="btn-ps">PS&gt;</span>
+      <span>Switch-ToAnubhav</span>
+      <span class="copied-badge">✓ copied</span>
+    </button>
+  </div>
+
+</section>
+
+<!-- ── COMMAND REFERENCE ─────────────────────────────────────────── -->
+<main class="section-wrap">
+
+  <div class="section-head">
+    <span class="section-label">Command Reference</span>
+  </div>
+
+  <div class="cmd-grid">
+
+    <!-- Quick Switch -->
+    <div class="cmd-block" onclick="copyBlock(this)">
+      <div class="cmd-block-top">
+        <span class="cmd-block-tag">Quick Switch</span>
+        <span class="copy-label" data-default="click to copy" data-copied="✓ copied">click to copy</span>
+      </div>
+      <div class="cmd-body">
+        <div class="cl"><span class="ps">PS&gt;</span><span class="ct hl-a">Switch-ToNextGen</span><span class="cm"># → nextgencode13</span></div>
+        <div class="cl"><span class="ps">PS&gt;</span><span class="ct hl-b">Switch-ToAnubhav</span><span class="cm"># → anubhav-codes-13</span></div>
+      </div>
+    </div>
+
+    <!-- Interactive Menu -->
+    <div class="cmd-block" onclick="copyBlock(this)">
+      <div class="cmd-block-top">
+        <span class="cmd-block-tag">Interactive Menu</span>
+        <span class="copy-label" data-default="click to copy" data-copied="✓ copied">click to copy</span>
+      </div>
+      <div class="cmd-body">
+        <div class="cl"><span class="ps">PS&gt;</span><span class="ct">ghswitch</span><span class="cm"># opens full menu</span></div>
+      </div>
+    </div>
+
+    <!-- Auto Detect -->
+    <div class="cmd-block" onclick="copyBlock(this)">
+      <div class="cmd-block-top">
+        <span class="cmd-block-tag">Auto-Detect from Repo</span>
+        <span class="copy-label" data-default="click to copy" data-copied="✓ copied">click to copy</span>
+      </div>
+      <div class="cmd-body">
+        <div class="cl"><span class="ps">PS&gt;</span><span class="ct">ghauto</span><span class="cm"># detects owner, auto-switches</span></div>
+      </div>
+    </div>
+
+    <!-- Verify Status -->
+    <div class="cmd-block" onclick="copyBlock(this)">
+      <div class="cmd-block-top">
+        <span class="cmd-block-tag">Verify Current Account</span>
+        <span class="copy-label" data-default="click to copy" data-copied="✓ copied">click to copy</span>
+      </div>
+      <div class="cmd-body">
+        <div class="cl"><span class="ps">PS&gt;</span><span class="ct">gh auth status</span></div>
+        <div class="cl"><span class="ps">PS&gt;</span><span class="ct">git config user.name</span></div>
+        <div class="cl"><span class="ps">PS&gt;</span><span class="ct">git config user.email</span></div>
+      </div>
+    </div>
+
+    <!-- PATH Fix -->
+    <div class="cmd-block full" onclick="copyBlock(this)">
+      <div class="cmd-block-top">
+        <span class="cmd-block-tag">Fix PATH (if gh not found in current session)</span>
+        <span class="copy-label" data-default="click to copy" data-copied="✓ copied">click to copy</span>
+      </div>
+      <div class="cmd-body">
+        <div class="cl"><span class="ps">PS&gt;</span><span class="ct">$env:PATH += ";$env:LOCALAPPDATA\Programs\gh"</span></div>
+      </div>
+    </div>
+
+    <!-- Direct Script -->
+    <div class="cmd-block full" onclick="copyBlock(this)">
+      <div class="cmd-block-top">
+        <span class="cmd-block-tag">Direct Script Flags</span>
+        <span class="copy-label" data-default="click to copy" data-copied="✓ copied">click to copy</span>
+      </div>
+      <div class="cmd-body">
+        <div class="cl"><span class="ps">PS&gt;</span><span class="ct">.\manage-accounts.ps1</span><span class="cm"># interactive menu</span></div>
+        <div class="cl"><span class="ps">PS&gt;</span><span class="ct">.\manage-accounts.ps1 <span class="hl-b">-Auto</span></span><span class="cm"># auto-detect repo owner</span></div>
+        <div class="cl"><span class="ps">PS&gt;</span><span class="ct">.\manage-accounts.ps1 <span class="hl-a">-Install</span></span><span class="cm"># register ghswitch / Switch-To* aliases</span></div>
+      </div>
+    </div>
+
+    <!-- Backup / gh not found -->
+    <div class="cmd-block full" onclick="copyBlock(this)">
+      <div class="cmd-block-top">
+        <span class="cmd-block-tag">⚠ Backup — if gh not found, run this first</span>
+        <span class="copy-label" data-default="click to copy" data-copied="✓ copied">click to copy</span>
+      </div>
+      <div class="cmd-body">
+        <div class="cl"><span class="ps">PS&gt;</span><span class="ct">$env:PATH += ";$env:LOCALAPPDATA\Programs\gh"<span class="hl-a">;</span> gh auth status</span><span class="cm"># fix PATH + verify in one shot</span></div>
+      </div>
+    </div>
+
+    <!-- First-time Setup -->
+    <div class="cmd-block full" onclick="copyBlock(this)">
+      <div class="cmd-block-top">
+        <span class="cmd-block-tag">First-Time Setup (run once)</span>
+        <span class="copy-label" data-default="click to copy" data-copied="✓ copied">click to copy</span>
+      </div>
+      <div class="cmd-body">
+        <div class="cl"><span class="ps">PS&gt;</span><span class="ct">$env:PATH += ";$env:LOCALAPPDATA\Programs\gh"</span><span class="cm"># add gh to session PATH</span></div>
+        <div class="cl"><span class="ps">PS&gt;</span><span class="ct">gh auth login</span><span class="cm"># run TWICE — once per account</span></div>
+        <div class="cl"><span class="ps">PS&gt;</span><span class="ct">.\manage-accounts.ps1 <span class="hl-a">-Install</span></span><span class="cm"># write aliases to $PROFILE</span></div>
+        <div class="cl"><span class="ps">PS&gt;</span><span class="ct">. $PROFILE</span><span class="cm"># reload profile in current terminal</span></div>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<!-- ── FOOTER ─────────────────────────────────────────────────────── -->
+<footer class="footer">
+  ⚡ GIT SWITCHER &nbsp;·&nbsp; <span>nextgencode13</span> &amp; <span>anubhav-codes-13</span> &nbsp;·&nbsp; PowerShell 5.1 · gh 2.95.0
+</footer>
+
+<script src="anubhav.js"></script>
+</html>
